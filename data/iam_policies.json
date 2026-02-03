@@ -1,0 +1,21 @@
+{
+  "policies": [
+    {
+      "policy_name": "AdminAccessPolicy",
+      "actions": ["*"],
+      "resources": ["*"],
+      "description": "Full administrative access"
+    },
+    {
+       "policy_name": "ReadOnlyLogsPolicy";
+        "actions": [
+          "logs:GetLogEvenets",
+          "logs:DescribeLogGroups"
+       ],
+      "resources": [
+         "arn:aws:logs:*:*:log-group:*"
+       ],
+       "description": "Read-only access to logs"
+    }
+  ]
+}
