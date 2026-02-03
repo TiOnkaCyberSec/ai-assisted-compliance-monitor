@@ -24,11 +24,10 @@ def generate_explanation(finding:Dict) -> str:
     f"This finding should be documented in security review and remediated per policy."
     )
     return explanation
-
+    
 def explain_findings(findings: List[Dict]) -> List[str]:
     return [generate_explanation(f) for f in findings]
-  
-if __name__ == "__main__":
+    if __name__ == "__main__":
     from analyzer.iam_checker import analyze_policies
     results = analyze_policies("data/iam_policies.json")
     if not results:
