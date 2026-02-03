@@ -7,7 +7,9 @@ The Tool evaluates security configurations and logs, maps findings to establishe
 
 ## Objectives
 - Detect compliance drift in security controls
+- Detect overly permissive IAM policies that violate least privilege principles
 - Map technical findings to regulatory requirements
+- Map IAM findings to NIST, CIS, and HIPAA access control requirements
 - Demonstrate secure, ethical AI usage in cybersecurity
 - Support audit preparation and executive reporting
 
