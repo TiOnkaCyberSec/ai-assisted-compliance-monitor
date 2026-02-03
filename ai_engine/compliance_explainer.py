@@ -27,12 +27,15 @@ def generate_explanation(finding:Dict) -> str:
     
 def explain_findings(findings: List[Dict]) -> List[str]:
     return [generate_explanation(f) for f in findings]
-    if __name__ == "__main__":
-    from analyzer.iam_checker import analyze_policies
-    results = analyze_policies("data/iam_policies.json")
-    if not results:
+    
+ if __name__ == "__main__":
+     from analyzer.iam_checker import analyze_policies
+     
+     results = analyze_policies("data/iam_policies.json")
+     
+     if not results:
         print("No high-risk IAM findings detected.")
-    else:
+     else:
         explanations = explain_findings(results)
         for idx, exp in enumerate(explanations,1):
             print(f"\n--- Finding {idx} ---\n")
