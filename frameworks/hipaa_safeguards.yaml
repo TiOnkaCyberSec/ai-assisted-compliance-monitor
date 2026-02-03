@@ -1,0 +1,23 @@
+framework: HIPAA Security Rule
+section: 45 CFR §164
+
+controls:
+  - id: 164.312(b)
+    name: Audit Controls
+    description: Implement hardware, software, and procedural mechanisms to record and examine activity in systems containing ePHI.
+    category: Logging and Monitoring
+    risk_if_missing: Inability to detect unauthorized acces to ePHI.
+    evidence_examples:
+      - Audit logging enabled
+      - Log review procedures
+
+   - id: 164.308(a)(4)
+     name: Information Access Management
+     description: Implement policies and procedures for authorizing access to ePHI.
+     category: Identity and Access Management
+     risk_if_missing: Improper exposure of patient data.
+     evidence_examples:
+       - Least privilege policies
+       - Access authorization documentation
+     
+  
