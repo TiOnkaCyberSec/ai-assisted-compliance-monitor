@@ -1,9 +1,9 @@
 import sys
 from pathlib import Path
+from typing import Dict, List
 
 sys.path.append(str(Path(__file__).resolve().parent.parent))
 
-from typing import Dict, List
 
 #Example: simple LLM function placeholder
 # In production, replace with OpenAI call or other LLM
