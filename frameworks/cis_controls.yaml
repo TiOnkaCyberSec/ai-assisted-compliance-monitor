@@ -1,0 +1,22 @@
+framework: CIS Critical Security Controls
+version: "v8"
+
+controls:
+ -id: 8.2
+  name: Audit Log Management
+  description: Collect, alert, review, and retain audit logs.
+  category: Logging and Monitoring
+  risk_if_missing: Undetected malicious activity.
+  evidence_examples:
+    - Centralized logging
+    - Log retention policies
+
+  -id: 6.3
+    name: Access Control Management
+    description: Enforce least privilege access for all users.
+    category: Identity and Access Management
+    risk_if_missing: Unauthorized data access.
+    evidence_examples:
+      - Role-based access controls
+      - Periodic access reviews 
+    
