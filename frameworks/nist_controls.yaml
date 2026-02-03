@@ -1,0 +1,21 @@
+framework: NIST SP 800-53
+version: "Rev 5"
+
+controls:
+-id: AU-2
+ name: Event Logging
+ description: Ensure system events are logged to support security monitoring and incident response.
+ category: Logging and Monitoring
+ risk_if_missing: Reduced visibility into security events.
+ evidence_examples:
+  - SIEM log ingestion enabled
+  - Log sources configured and validated
+
+  -id: AC-2
+  name: Account Management
+  description: Manage system accounts to enforce least privilege
+  category: Identity and Access Management
+  risk_if_missing: Excessive access leading to unauthorized activity
+  evidence_examples:
+   -IAM policy reviews
+   -Disabled stale accounts
