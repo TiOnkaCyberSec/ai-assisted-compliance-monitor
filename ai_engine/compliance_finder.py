@@ -44,4 +44,4 @@ def build_findings(parsed_statements):
           "Review permissions for least privilege alignment"
         ]
       })
-return findings
+      return findings
