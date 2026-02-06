@@ -1,7 +1,7 @@
 # AI-Assisted Compliance Monitor
 
 ## Overview
-This project demonstrates how AI can be responsibly leveraged to support continuous coompliance monitoring in regulated environments.
+This project demonstrates how AI can be responsibly leveraged to support continuous compliance monitoring in regulated environments.
 
 The Tool evaluates security configurations and logs, maps findings to established compliance frameworks (NIST, CIS, HIPAA), and uses AI to assist with risk explanation and audit-ready reporting, without replacing human judgment.
 
