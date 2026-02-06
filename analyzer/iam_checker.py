@@ -28,8 +28,9 @@ def analyze_policy(policy: dict):
             "principle_violated": "Least Privilege",
             "compliance_impact": COMPLIANCE_MAPPING
            })
-    return findings
-
+        
+return findings
+   
 def analyze_policies(file_path: str):
     all_findings = []
     policies = load_policies(file_path)
