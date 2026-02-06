@@ -23,7 +23,7 @@ def parse_policy(file_path):
     if isinstance(resources, str):
       resources = [resources]
 
-   parsed_statements.append({
+    parsed_statements.append({
      "effect": stmt.get("Effect"),
      "actions": actions,
      "resources": resources,
@@ -32,4 +32,4 @@ def parse_policy(file_path):
      "has_wildcard_resource": "*" in resources
   })
 
- return parsed_statements
+  return parsed_statements
