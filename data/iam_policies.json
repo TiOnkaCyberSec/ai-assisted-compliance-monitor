@@ -7,9 +7,9 @@
       "description": "Full administrative access"
     },
     {
-       "policy_name": "ReadOnlyLogsPolicy";
+       "policy_name": "ReadOnlyLogsPolicy",
         "actions": [
-          "logs:GetLogEvenets",
+          "logs:GetLogEvents",
           "logs:DescribeLogGroups"
        ],
       "resources": [
