@@ -43,3 +43,8 @@ python -c "from ai_engine.policy_parser import parse_policy; from ai_engine.comp
 
 ## Disclaimer
 This project is for educational and demonstration purposes. AI outputs are assistive and require human validation before use in production or audits.
+
+## Author
+
+TiOnkaCyberSec
+Cybersecurity | IAM | Cloud Security | Compliance Automation | ISC2 CC | Google Cybersecurity Certificate
