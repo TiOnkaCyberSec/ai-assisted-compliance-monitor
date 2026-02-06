@@ -9,15 +9,17 @@ COMPLIANCE_MAPPING = {
     "CIS": ["6.3"],
     "HIPAA": ["164.308(a)(4)"]
 }
-def load_policies(file_path):
+def load_policies(file_path: str):
     path = Path(file_path)
     with path.open("r") as f:
         return json.load(f)["policies"]
 
-def analyze_policy(policy):
+def analyze_policy(policy: dict):
     findings = []
+    
     wildcard_action = any(action in HIGH_RISK_ACTIONS for action in policy["actions"])
-    wildcard_resource = any(resource in HIGH_RISK_RESOURCES for resource in policy["resources"])
+    wildcard_resource = any(resource in HIGH_RISK_RESOURCES for resource in policy["resources"]) 
+    
     if wildcard_action and wildcard_resource:
         findings.append({
             "policy_name": policy["policy_name"],
@@ -26,20 +28,15 @@ def analyze_policy(policy):
             "principle_violated": "Least Privilege",
             "compliance_impact": COMPLIANCE_MAPPING
            })
-            return findings
+    return findings
 
-def analyze_polices(file_path):
+def analyze_policies(file_path: str):
     all_findings = []
     policies = load_policies(file_path)
+    
     for policy in policies:
         all_findings.extend(analyze_policy(policy))
-        return all_findings
-        if __name__ == "__main__":
-            results = analyze_policies("data/iam_policies.json")
-            if not results:
-                print("No high-risk IAM findings detected.")
-            else:
-                for finding in results:
-                    print("\nIAM COMPLIANCE FINDING")
-                    for key, value in finding.items():
-                        print(f"{key}: {value}")
+        
+    return all_findings
+    
+        
